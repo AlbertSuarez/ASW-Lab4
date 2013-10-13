@@ -13,7 +13,7 @@ try{
 	echo $fahrenheitTemp, ' Fahrenheit ==> ', $response["cresult"], ' Celsius ';
 	echo "[Server TimeStamp: ", date('l jS \of F Y @ h:i:s A',strtotime($response["timeStamp"])), "]\n";
 
-	/* Task #2: Write your code here. Use de function xmlpp (implemented below)
+	/* Task #2: Write your code here. Use the function xmlpp (implemented below)
 	 * to print the 2 SOAP messages (request and response).*/
 	
 	// Task #3: Uncomment the following lines:
