@@ -34,7 +34,7 @@ try{
 }
 
 // ---------------------------------------------------------------------------
-// La funció xmlpp imprimeix un string xml de manara "identada"
+// Function xmlpp prints a xml-formatted string ($xml) with a proper nesting
 function xmlpp($xml) {  
     $xml_obj = new SimpleXMLElement($xml);  
     $level = 4;  
