@@ -1,7 +1,7 @@
 <?php
  
 ini_set("soap.wsdl_cache_enabled","0");
-$server = new SoapServer("http://localhost:8080/wslab04/WSLabService.wsdl");
+$server = new SoapServer("http://localhost:8080/aswlab04/WSLabService.wsdl");
 
 function FahrenheitToCelsius($fdegree){
     $cresult = ($fdegree - 32) * (5/9);
