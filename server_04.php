@@ -9,19 +9,9 @@ function FahrenheitToCelsius($fdegree){
 }
 
 function CurrencyConverter($from_Currency,$to_Currency,$amount) {
-	$amount = urlencode($amount);
-	$from_Currency = urlencode($from_Currency);
-	$to_Currency = urlencode($to_Currency);
-	$url = "http://www.google.com/ig/calculator?hl=en&q=$amount$from_Currency=?$to_Currency";
-	$rawdata = file_get_contents($url);
-	$data = explode('"', $rawdata);
-	$error = $data['5'];
-	if (!$error) {
-		$data = explode(' ', $data['3']);
-		$var = $data['0'];
-		return round($var,3);
-	}
-	else return new SoapFault("Server", "Error message: ".$error);
+	$uri="http://www.webservicex.net/currencyconvertor.asmx/ConversionRate?FromCurrency=$from_Currency&ToCurrency=$to_Currency";
+	$rate = new SimpleXMLElement(file_get_contents($uri));
+	return $amount * doubleval($rate);
 };
 
 // Tasks #4 & #5: Implement here the GetHomeTowns function and add it to $server
