@@ -14,7 +14,7 @@ function CurrencyConverter($from_Currency,$to_Currency,$amount) {
 	return $amount * doubleval($rate);
 };
 
-// Tasks #4 & #5: Implement here the GetHomeTowns function and add it to $server
+// Task #4: Implement here the CurrencyConverterPlus function and add it to $server
 
 $server->addFunction("FahrenheitToCelsius");
 
