@@ -24,7 +24,7 @@ try{
 	echo "\n   ", $inAmount, " ",$inCur, " ==> ",$outAmount, " ",$outCur,"\n\n";
 	*/
 	
-	// Tasks #4 & #5 -> Call GetHomeTowns and var_dump its result:
+	// Task #4: Call CurrencyConverterPlus and display its result:
 	
 	
 	
