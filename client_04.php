@@ -4,7 +4,7 @@ ini_set("soap.wsdl_cache_enabled","0");
 date_default_timezone_set("Europe/Andorra");
 
 try{
-	$sClient = new SoapClient('http://localhost:8080/aswlab04/WSLabService.wsdl', array('trace' => 1));
+	$sClient = new SoapClient('http://localhost:8080/waslab04/WSLabService.wsdl', array('trace' => 1));
 
 	$fahrenheitTemp = "63.5";
 	$response = $sClient->FahrenheitToCelsius($fahrenheitTemp);
