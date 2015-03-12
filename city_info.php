@@ -9,10 +9,13 @@ try{
   // Use $sClient to call the operation GetWeather
   // echo the returned info as a JSON object
 
+  header(':', true, 501); // Just remove this line to return the successful 
+                          // HTTP-response status code 200.
   echo json_encode(array('Result' => 'Not implemented'));
   
 }
 catch(SoapFault $e){
+  header(':', true, 500);
   echo json_encode($e);
 }
 ?>
