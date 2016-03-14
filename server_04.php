@@ -9,9 +9,9 @@ function FahrenheitToCelsius($fdegree){
 }
 
 function CurrencyConverter($from_Currency,$to_Currency,$amount) {
-	$uri="http://www.webservicex.net/currencyconvertor.asmx/ConversionRate?FromCurrency=$from_Currency&ToCurrency=$to_Currency";
-	$rate = new SimpleXMLElement(file_get_contents($uri));
-	return $amount * doubleval($rate);
+	$uri = "http://currencies.apps.grandtrunk.net/getlatest/$from_Currency/$to_Currency";
+	$rate = doubleval(file_get_contents($uri));
+	return round($amount * $rate, 2);
 };
 
 // Task #4: Implement here the CurrencyConverterPlus function and add it to $server
