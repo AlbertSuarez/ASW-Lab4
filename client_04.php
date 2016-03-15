@@ -35,6 +35,21 @@ try{
 	
 	
 	// Task #4: Call CurrencyConverterPlus and display its result:
+	$arrayConv = array();
+	array_push($arrayConv, "EUR", "CAD", "TRY");
+	
+	$entrada = new stdClass();
+	$entrada->from_Currency = "CNY";
+	$entrada->to_Currencies = $arrayConv;
+	$entrada->amount = 1000;
+
+	$result = $sClient->CurrencyConverterPlus($entrada);
+	
+	echo "1000 CNY" . "\n";
+	foreach ($result as $valor) {
+	  echo "\t==> " . $valor->amount . " " . $valor->currency . "\n";
+	}
+	
 	
 	
 	
