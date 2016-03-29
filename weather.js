@@ -2,7 +2,6 @@
 function showCities () {
    var country = document.getElementById("countryName").value;
 
-
    req = new XMLHttpRequest();
    req.open('GET', "http://localhost/waslab04/city_names.php" + "?country=" + country, true);
    
@@ -38,9 +37,9 @@ function showWeather (cityName) {
 	
 	var v = JSON.parse(req.responseText);
  
-	document.getElementById("right").innerHTML = 	"<table style = 'font-family: Helvetica'>" + "<tr>" + "<td>" + 
-							"Location:" "</td>" + "<td>" + v.location + "</td>" + "</tr>"
-							+ "<tr>" + "<td>" + "Time:" "</td>" + "<td>" + v.time + "</td>" + "</tr>"
+	document.getElementById("right").innerHTML =    "<table style = 'font-family: Helvetica'>" + "<tr>" + "<td>" + 
+							"Location:" + "</td>" + "<td>" + v.location + "</td>" + "</tr>"
+							+ "<tr>" + "<td>" + "Time:" + "</td>" + "<td>" + v.time + "</td>" + "</tr>"
 							+ "<tr>" + "<td>" + "Wind: " + "</td>"+ "<td>" + v.wind + "</td>" + "</tr>"
 							+ "<tr>" + "<td>" + "Visibility: " + "</td>" + "<td>" + v.visibility + "</td>" + "</tr>"
 							+ "<tr>" + "<td>" + "SkyConditions: " + "</td>"+ "<td>" + v.skyconditions + "</td>" + "</tr>"
@@ -49,7 +48,7 @@ function showWeather (cityName) {
 							+ "<tr>" + "<td>" + "RelativeHumidity: " + "</td>" + "<td>" + v.relativehumidity + "</td>" + "</tr>"
 							+ "<tr>" + "<td>" + "Pressure: " + "</td>" + "<td>" + v.pressure + "</td>" + "</tr>"
 							+ "<tr>" + "<td>" + "Status: " + "</td>" + "<td>" + v.status + "</td>" + "</tr>"
-							+ "</table>"
+							+ "</table>";
 
       }
     }
