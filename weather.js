@@ -10,7 +10,7 @@ function showCities () {
        var ciutats = v['GetCitiesByCountryResult'];
        document.getElementById("left").innerHTML = ""; //abans d'omplenar amb les ciutats, netejem les ciutats mostrades anteriorment
        for (var i = 0 ;i < v.length; ++i) {
-	 document.getElementById("left").innerHTML = document.getElementById("left").innerHTML + "<a href='javascript:void(0);' id='" + i + "' ciudad='" + v[i].Ciudad + "' onclick=showWeather('" + i + "')>" + v[i].Ciudad + "</a><br>";
+	 document.getElementById("left").innerHTML = document.getElementById("left").innerHTML + "<a href='javascript:void(0);' id='" + i + "' ciudad='" + v[i] + "' onclick=showWeather('" + i + "')>" + v[i] + "</a><br>";
        }
        document.getElementById("right").innerHTML =  "&lArr;"+ " Select a city from the left menu";
     }
