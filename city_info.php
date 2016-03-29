@@ -9,10 +9,24 @@ try{
   // Use $sClient to call the operation GetWeather
   // echo the returned info as a JSON object
 
-  header(':', true, 501); // Just remove this line to return the successful 
-                          // HTTP-response status code 200.
-  echo json_encode(array('Result' => 'Not implemented'));
+
+  $country = $_GET['country'];
+  $city = $_GET['city'];
+
+  $entrada = new stdClass();
+  $entrada->CityName = $city;
+  $entrada->CountryName = $country;
+
+  $sortida = new stdClass();
+  $sortida->GetWeatherResult;
   
+  $sortida = $sClient->GetWeather($entrada);
+
+  $result = "Data Not Found";
+  if(strcmp($sortida->GetWeatherResult, $result) !== 0) $result = json_encode(array($sortida->GetWeatherResult));
+
+  echo $result;
+
 }
 catch(SoapFault $e){
   header(':', true, 500);

@@ -32,7 +32,7 @@ function showWeather (cityName) {
   
   req.onreadystatechange = function() {
     if (req.readyState == 4 && req.status == 200) {
-      if (req.responseText=="NoData") alert ("No hi ha informacio del temps per "+city);
+      if (req.responseText=="Data Not Found") alert ("No hi ha informacio del temps per "+city);
       else {
 	
 	var v = JSON.parse(req.responseText);
